@@ -1,0 +1,19 @@
+[project]
+name = "SocialSage-AI"
+version = "0.1.0"
+description = "Empowering Modern Teams to Create Better, Faster, and Smarter — Without Breaking the Bank"
+authors = [
+    {name = "X-Innovate", email = "we@xinnovate.app"},
+]
+dependencies = []
+requires-python = ">=3.13"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
