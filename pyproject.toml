@@ -5,15 +5,10 @@ description = "Empowering Modern Teams to Create Better, Faster, and Smarter —
 authors = [
     {name = "X-Innovate", email = "we@xinnovate.app"},
 ]
-dependencies = []
-requires-python = ">=3.13"
+dependencies = ["crewai[tools]>=0.119.0", "crewai-tools>=0.44.0", "python-dotenv>=1.1.0"]
+requires-python = "<3.13,>=3.10"
 readme = "README.md"
 license = {text = "MIT"}
-
-[build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
-
 
 [tool.pdm]
 distribution = true
