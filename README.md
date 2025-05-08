@@ -72,9 +72,9 @@ We’re building the AI-powered backbone for modern content teams — to help **
 
 ## Overview
 
-**Codevase** is an ambitious project aimed at revolutionizing content creation for small teams and solo marketers. It's being developed as a modular system of AI agents, each specializing in a crucial step of the content lifecycle. By leveraging the power of artificial intelligence, Codevase intends to democratize access to high-quality, efficient content creation, enabling users to overcome the traditional barriers of cost, time, and scalability.
+**SocialSage AI** is an ambitious project aimed at revolutionizing content creation for small teams and solo marketers. It's being developed as a modular system of AI agents, each specializing in a crucial step of the content lifecycle. By leveraging the power of artificial intelligence, SocialSage AI intends to democratize access to high-quality, efficient content creation, enabling users to overcome the traditional barriers of cost, time, and scalability.
 
-This repository will house the codebase and related resources for the Codevase project. As development progresses, you will find:
+This repository will house the codebase and related resources for the SocialSage AI project. As development progresses, you will find:
 
 * **Agent-specific modules:** Individual directories for each AI agent (e.g., `trend_analysis_agent`, `content_draft_agent`).
 * **Core framework:** Libraries and utilities that support the interaction and orchestration of the different agents.
@@ -82,6 +82,6 @@ This repository will house the codebase and related resources for the Codevase p
 * **Documentation:** Detailed explanations of the system architecture, agent functionalities, and usage guidelines.
 * **Testing suites:** Frameworks and tests to ensure the reliability and accuracy of each agent.
 
-**Current Status:** The development of Codevase is currently in progress. The initial focus is on building the core framework and the foundational AI agents.
+**Current Status:** The development of SocialSage AI is currently in progress. The initial focus is on building the core framework and the foundational AI agents.
 
-**Stay Tuned:** We are excited about the potential of Codevase and will be regularly updating this repository with our progress. Contributions and feedback will be welcome as the project matures.
+**Stay Tuned:** We are excited about the potential of SocialSage AI and will be regularly updating this repository with our progress. Contributions and feedback will be welcome as the project matures.
