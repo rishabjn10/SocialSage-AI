@@ -1,42 +1,38 @@
-research_task:
-  description: >
-    Conduct a thorough research about the customer and competitors in the context
-    of {customer_domain}.
-    Make sure you find any interesting and relevant information given the
-    current year is 2024.
-    We are working with them on the following project: {project_description}.
-  expected_output: >
-    A complete report on the customer and their customers and competitors,
-    including their demographics, preferences, market positioning and audience engagement.
+# config/tasks.yaml
 
-project_understanding_task:
+research_and_profiling_task:
   description: >
-    Understand the project details and the target audience for
-    {project_description}.
-    Review any provided materials and gather additional information as needed.
+    1. Analyze the user's profile: domain '{domain_name}', skills '{skill_sets}', target audience '{target_audience}', and country '{country}'.
+    2. Conduct in-depth research using available tools to find current trends, relevant news, recent discussions, common audience questions/pain points, and popular hashtags related to this profile.
+    3. Compile all findings into a structured report.
   expected_output: >
-    A detailed summary of the project and a profile of the target audience.
+    A comprehensive JSON object (conforming to the ResearchFindings Pydantic model). This report must include:
+    - trending_topics: List of current trending topics.
+    - relevant_news: List of brief news summaries (title, summary, optional source).
+    - popular_hashtags: List of relevant and popular hashtags.
+    - common_questions_asked: List of questions or pain points of the target audience.
+    - engaging_content_formats: List of content formats observed to be engaging for this domain/audience.
 
-marketing_strategy_task:
+content_planning_task:
   description: >
-    Formulate a comprehensive marketing strategy for the project
-    {project_description} of the customer {customer_domain}.
-    Use the insights from the research task and the project understanding
-    task to create a high-quality strategy.
+    1. Review the detailed research report and the user's profile (domain '{domain_name}', skills '{skill_sets}', target audience '{target_audience}').
+    2. Develop a strategic plan for **one single, highly impactful LinkedIn post**.
+    3. This plan must define: a unique post_id (e.g., 'post_datetime_random'), a clear theme_idea, the specific content_type (e.g., 'informational', 'meme', 'learning_snippet'), a concise key_message to convey, and a list of preliminary_hashtags.
   expected_output: >
-    A detailed marketing strategy document that outlines the goals, target
-    audience, key messages, and proposed tactics, make sure to have name, tatics, channels and KPIs
+    A structured JSON object (conforming to the ContentPostOutline Pydantic model) detailing the plan for one LinkedIn post.
 
-campaign_idea_task:
+linkedin_post_generation_task:
   description: >
-    Develop creative marketing campaign ideas for {project_description}.
-    Ensure the ideas are innovative, engaging, and aligned with the overall marketing strategy.
+    1. Take the provided 'ContentPostOutline' which specifies the theme, content type, and key message.
+    2. Write a complete and engaging LinkedIn post body tailored to this plan. The tone should be appropriate for LinkedIn and the target audience.
+    3. Finalize a list of relevant and effective hashtags.
+    4. Conceptualize a visual element (image, short video idea, meme, pictograph etc.) that would best accompany this post. Describe this visual concept clearly.
+    5. Generate a detailed and effective prompt for a text-to-image or text-to-video AI tool to create the suggested visual.
   expected_output: >
-    A list of 5 campaign ideas, each with a brief description and expected impact.
-
-copy_creation_task:
-  description: >
-    Create marketing copies based on the approved campaign ideas for {project_description}.
-    Ensure the copies are compelling, clear, and tailored to the target audience.
-  expected_output: >
-    Marketing copies for each campaign idea.
+    A JSON object (conforming to the LinkedInPostDetail Pydantic model) containing:
+    - post_id: The ID from the input plan.
+    - theme: The theme from the input plan.
+    - content_type: The content type from the input plan.
+    - linkedin_post_body: The full, ready-to-publish text of the post.
+    - hashtags: A finalized list of hashtags.
+    - visual_suggestion: An object detailing the visual_type, its description, and the text_to_media_prompt.
